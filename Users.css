@@ -1,0 +1,23 @@
+.main{
+    display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; 
+}
+#Image{
+    height: 800px;
+    width: 400px;
+    background-color: #fafbfa;
+    border: 2px solid #61B846;
+    box-shadow: 5px 5px 10px rgba(122, 123, 122, 0.5);
+    padding-top: 30px;
+    border-radius: 40px;
+    }
+.main_heading{
+    padding-left: 10px;
+    color: #61B846; 
+}
+.main_heading1{
+    color:  #024F9D;
+    padding-left: 20px;
+    margin-top: -17px;
+}
