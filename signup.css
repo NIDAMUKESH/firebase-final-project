@@ -139,6 +139,7 @@
     font-weight: bold;
     font-size: 15px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 #sigin{
     color:#024F9D;

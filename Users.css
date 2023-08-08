@@ -56,6 +56,10 @@ color: var(--black);
 .header .navbar a:hover{
     color: var(--green);
 }
+/* .home.active {
+    background-color: var(--green);
+    color: white; /* Change to the desired color, e.g., green 
+} */
 .header .icons div{
 height: 4.5rem;
 width: 4.5rem;
@@ -74,4 +78,62 @@ cursor: pointer;
 }
 #menu-btn{
     display: none;
+}
+.header .search-form{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 50rem;
+    height: 5rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+.header .search-form.active{
+    right: 2rem;
+    transition: 0.4s linear;
+}
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+
+}
+.header .search-form label{
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+.header .search-form label:hover{
+    color: var(--green);
+}
+
+
+
+
+
+
+
+
+@media (max-width : 991px){
+    html{
+        font-size: 50%;
+    }
+    .header{
+        padding: 2rem;
+    }
+}
+
+@media (max-width : 451px){
+    html{
+        font-size: 60%;
+    }
 }
