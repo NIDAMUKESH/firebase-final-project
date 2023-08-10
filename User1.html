@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAYLANI WELFARE</title>
- 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link rel="stylesheet" href="./Users.css">
+    <title>SAYLANI WELFARE Home Page</title>
+    <link rel="WebSite icon" type="png" href="./Image/Logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./Users.css">
 </head>
 
 <body>
@@ -23,21 +23,63 @@
                 <a href="">Review</a>
             </nav>
             <div class="icons">
-            <div class="fa fa-bars" id="menu-btn"></div>
-            <div class="fa fa-home" id="home-btn"></div>       
-            <div class="fa fa-search" id="search-btn"></div>
-            <div class="fa fa-shopping-cart" id="shoppingcart-btn"></div>
-            <div class="fa fa-user" id="login-btn"></div>
+                <div class="fa fa-bars" id="menu-btn"></div>
+                <div class="fa fa-home" id="home-btn"></div>
+                <div class="fa fa-search" id="search-btn"></div>
+                <div class="fa fa-shopping-cart" id="shoppingcart-btn"></div>
+                <div class="fa fa-user" id="login-btn"></div>
             </div>
             <form class="search-form">
                 <input type="search" id="search-box" placeholder="Search Here....">
                 <label for="search-box" class="fa fa-search"></label>
             </form>
+            <div class="shopping-cart">
+                <div class="box">
+                    <i class="fa fa-trash"></i>
+                    <img src="./Image/Rectangle 12.png" alt="">
+                    <div class="content">
+                        <h3>Grocery</h3>
+                        <span class="price">$25.00</span>
+                        <button class="sub">-</button>
+                        <span class="quantity">1</span>
+                        <button class="add">+</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="./Image/Rectangle 13.png" alt="">
+                    <div class="content">
+                        <h3>Vegetables</h3>
+                        <span class="price">$45.00</span>
+                        <button class="sub">-</button>
+                        <span class="quantity">1</span>
+                        <button class="add">+</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="./Image/Rectangle 14.png" alt="">
+                    <div class="content">
+                        <h3>Fruits</h3>
+                        <span class="price">$35.00</span>
+                        <button class="sub">-</button>
+                        <span class="quantity">1</span>
+                        <button class="add">+</button>
+                    </div>
+                </div>
+                <div class="total"> Total : $105.00 </div>
+                <div class="inputfeilds">
+                    <input type="text" id="username" name="username" placeholder="Full Name">
+                    <input type="text" id="Contant" name="username" placeholder="Email">
+                    <input type="text" id="Email" name="username" placeholder="Phone Number">
+                    <input type="text" id="Password" name="username" placeholder="Shipping Address">
+                </div>
+            </div>
         </div>
-     
+
+        
+
     </header>
 
- <script src="./user.js"></script>
+    <script src="./user.js"></script>
 </body>
 
 </html>

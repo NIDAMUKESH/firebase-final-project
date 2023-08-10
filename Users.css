@@ -69,7 +69,7 @@ background-color: #eee;
 color: var(--black);
 margin-right: 0.3rem;
 text-align: center;
-font-size: 2rem;
+font-size: 2.5rem;
 cursor: pointer;
 }
 .header .icons div:hover{
@@ -115,11 +115,157 @@ cursor: pointer;
 .header .search-form label:hover{
     color: var(--green);
 }
+.header .shopping-cart{
+    position: absolute;
+    top: 100%;
+    right: 2rem;
+padding: 1rem;
+border-radius: 0.5rem;
+box-shadow: var(--box-shadow);
+width: 40rem;
+height: 100rem;
+background: white;
+}
+.header .shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem 0rem;
+}
+.header .shopping-cart .box .fa-trash{
+    font-size: 2rem;
+    position: absolute;
+    top: 5%;
+    right: 1.5rem;
+    color: var(--green);
+    cursor: pointer;
 
+}
+.header .shopping-cart .box .price{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+}
+.header .shopping-cart .box button{
+    width: 3rem;
+    height: 2rem;
+   border-radius: 1rem;
+   box-shadow: var(--outline);
+}
+ .box .quantity{
+    font-size: 2rem;
+}
+.header .shopping-cart .box .content h3{
+    color: var(--black);
+    font-size: 1.7rem;
+}
+.header .shopping-cart .total{
+    font-size: 2rem;
+    padding: 1rem 12rem;
+    color: var(--black);
+    align-items: center;
 
+}
 
+#username {
+    border: none;
+    background: none;
+    border-bottom: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    /* Adjust font styles as needed */
+    font-size: 16px;
+    width: 250px;
+}
 
+.inputfeilds {
+    padding-top: 50px;
+    padding-left: 40px;
+    position: relative;
+    padding-bottom: 100px;
+}
 
+.userimage {
+    position: absolute;
+    /* Set the image as an absolute position within the container */
+    top: 40px;
+    /* Adjust the vertical position of the image */
+    left: 270px;
+    /* Adjust the horizontal position of the image */
+    height: 24PX;
+    width: 24PX;
+}
+
+#Contant {
+    padding-top: 30px;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #ccc;
+    /* Add a bottom border to show the line */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    width: 250px;
+
+}
+
+#Email {
+    padding-top: 30px;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #ccc;
+    /* Add a bottom border to show the line */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    width: 250px;
+
+}
+
+#Password {
+    padding-top: 30px;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #ccc;
+    /* Add a bottom border to show the line */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    width: 250px;
+
+}
+
+#Passwordimage {
+    position: absolute;
+    /* Set the image as an absolute position within the container */
+    top: 190px;
+    /* Adjust the vertical position of the image */
+    left: 270px;
+    /* Adjust the horizontal position of the image */
+    height: 24PX;
+    width: 24PX;
+}
+
+#contantimg {
+    position: absolute;
+    /* Set the image as an absolute position within the container */
+    top: 90px;
+    /* Adjust the vertical position of the image */
+    left: 270px;
+    /* Adjust the horizontal position of the image */
+    height: 24PX;
+    width: 24PX;
+
+}
+
+#Emailimg {
+    position: absolute;
+    /* Set the image as an absolute position within the container */
+    top: 140px;
+    /* Adjust the vertical position of the image */
+    left: 270px;
+    /* Adjust the horizontal position of the image */
+    height: 24PX;
+    width: 24PX;
+}
 
 
 
@@ -128,7 +274,7 @@ cursor: pointer;
         font-size: 50%;
     }
     .header{
-        padding: 2rem;
+        padding: 2rem ;
     }
 }
 
