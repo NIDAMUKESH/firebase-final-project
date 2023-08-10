@@ -1,37 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,100;1,200;1,300&display=swap');
- *{
-font-family: 'poppins', sans-serif;
-margin: 0;
-padding: 0;
-outline: none;
-box-sizing: border-box;
-border: none;
-text-decoration: none;
-text-transform: capitalize;
-transition: all .1s linear;
- }
- :root{
-    --green : green;
+
+* {
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .1s linear;
+}
+
+:root {
+    --green: green;
     --black: #0f0d26;
     --lighht-color: #666;
     --box-shadow: 5px 5px 10px rgba(122, 123, 122, 0.9);
-    --border: 2rem solid rgba(0,0,0.1);
-    --outline: 0.1rem solid rgba(0,0,0.1);
+    --border: 2rem solid rgba(0, 0, 0.1);
+    --outline: 0.1rem solid rgba(0, 0, 0.1);
 }
-html{
+
+html {
     font-size: 63.2%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 7rem;
 }
-body{
+
+body {
     background-color: #eee;
 }
-.img{
+
+.img {
     height: 12%;
     width: 12%;
 }
-.header{
+
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -40,46 +46,53 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 2rem 7%;
-  background: #fff;
-  border: 0px solid;
-  box-shadow: var(--box-shadow);
+    background: #fff;
+    border: 0px solid;
+    box-shadow: var(--box-shadow);
 }
-.header .logo{
+
+.header .logo {
     font-size: 2.2rem;
     font-weight: bolder;
 }
-.header .navbar a{
-font-size: 2rem;
-margin: 0 1.6rem;
-color: var(--black);
+
+.header .navbar a {
+    font-size: 2rem;
+    margin: 0 1.6rem;
+    color: var(--black);
 }
-.header .navbar a:hover{
+
+.header .navbar a:hover {
     color: var(--green);
 }
+
 /* .home.active {
     background-color: var(--green);
     color: white; /* Change to the desired color, e.g., green 
 } */
-.header .icons div{
-height: 4.5rem;
-width: 4.5rem;
-line-height: 4.5rem;
-border-radius: 0.5rem;
-background-color: #eee;
-color: var(--black);
-margin-right: 0.3rem;
-text-align: center;
-font-size: 2.5rem;
-cursor: pointer;
+.header .icons div {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: 0.5rem;
+    background-color: #eee;
+    color: var(--black);
+    margin-right: 0.3rem;
+    text-align: center;
+    font-size: 2.5rem;
+    cursor: pointer;
 }
-.header .icons div:hover{
+
+.header .icons div:hover {
     background-color: var(--green);
     color: white;
 }
-#menu-btn{
+
+#menu-btn {
     display: none;
 }
-.header .search-form{
+
+.header .search-form {
     position: absolute;
     top: 110%;
     right: -110%;
@@ -92,11 +105,13 @@ cursor: pointer;
     align-items: center;
     box-shadow: var(--box-shadow);
 }
-.header .search-form.active{
+
+.header .search-form.active {
     right: 2rem;
     transition: 0.4s linear;
 }
-.header .search-form input{
+
+.header .search-form input {
     height: 100%;
     width: 100%;
     background: none;
@@ -106,34 +121,45 @@ cursor: pointer;
     padding: 0 1.5rem;
 
 }
-.header .search-form label{
+
+.header .search-form label {
     font-size: 2.2rem;
     padding-right: 1.5rem;
     color: var(--black);
     cursor: pointer;
 }
-.header .search-form label:hover{
+
+.header .search-form label:hover {
     color: var(--green);
 }
-.header .shopping-cart{
+
+.header .shopping-cart {
     position: absolute;
-    top: 100%;
-    right: 2rem;
-padding: 1rem;
-border-radius: 0.5rem;
-box-shadow: var(--box-shadow);
-width: 40rem;
-height: 100rem;
-background: white;
+    top: 110%;
+    right: -110%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    width: 40rem;
+    height: 100rem;
+    background: white;
+    border: 2px solid #61B846;
 }
-.header .shopping-cart .box{
+
+.header .shopping-cart.active {
+    right: 2rem;
+    transition: 0.4s linear;
+}
+
+.header .shopping-cart .box {
     display: flex;
     align-items: center;
     gap: 1rem;
     position: relative;
-    margin: 1rem 0rem;
+    margin: 2rem 0rem;
 }
-.header .shopping-cart .box .fa-trash{
+
+.header .shopping-cart .box .fa-trash {
     font-size: 2rem;
     position: absolute;
     top: 5%;
@@ -142,26 +168,31 @@ background: white;
     cursor: pointer;
 
 }
-.header .shopping-cart .box .price{
+
+.header .shopping-cart .box .price {
     font-size: 1.5rem;
-    position: absolute;
+    position: relative;
     top: 50%;
     right: 0.5rem;
 }
-.header .shopping-cart .box button{
+
+.header .shopping-cart .box button {
     width: 3rem;
     height: 2rem;
-   border-radius: 1rem;
-   box-shadow: var(--outline);
+    border-radius: 1rem;
+    box-shadow: var(--outline);
 }
- .box .quantity{
+
+.box .quantity {
     font-size: 2rem;
 }
-.header .shopping-cart .box .content h3{
+
+.header .shopping-cart .box .content h3 {
     color: var(--black);
     font-size: 1.7rem;
 }
-.header .shopping-cart .total{
+
+.header .shopping-cart .total {
     font-size: 2rem;
     padding: 1rem 12rem;
     color: var(--black);
@@ -169,14 +200,16 @@ background: white;
 
 }
 
-#username {
+#Full-Name {
     border: none;
     background: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
     font-family: Arial, sans-serif;
     /* Adjust font styles as needed */
     font-size: 16px;
-    width: 250px;
+    width: 300px;
+    padding-bottom: 20px;
+
 }
 
 .inputfeilds {
@@ -186,100 +219,184 @@ background: white;
     padding-bottom: 100px;
 }
 
-.userimage {
-    position: absolute;
-    /* Set the image as an absolute position within the container */
-    top: 40px;
-    /* Adjust the vertical position of the image */
-    left: 270px;
-    /* Adjust the horizontal position of the image */
-    height: 24PX;
-    width: 24PX;
-}
-
-#Contant {
-    padding-top: 30px;
-    border: none;
-    background: none;
-    border-bottom: 1px solid #ccc;
-    /* Add a bottom border to show the line */
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    width: 250px;
-
-}
-
 #Email {
     padding-top: 30px;
     border: none;
     background: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
     /* Add a bottom border to show the line */
     font-family: Arial, sans-serif;
     font-size: 16px;
-    width: 250px;
+    width: 300px;
+    padding-bottom: 20px;
 
 }
 
-#Password {
+#Phone-Number {
     padding-top: 30px;
     border: none;
     background: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
     /* Add a bottom border to show the line */
     font-family: Arial, sans-serif;
     font-size: 16px;
-    width: 250px;
+    width: 300px;
+    padding-bottom: 20px;
+}
+
+#Shipping-Address {
+    padding-top: 30px;
+    border: none;
+    background: none;
+    border-bottom: 2px solid #ccc;
+    /* Add a bottom border to show the line */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    width: 300px;
+    padding-bottom: 50px;
 
 }
 
-#Passwordimage {
+.btn {
+    border: 3px solid var(--black);
+    /* margin-top: 1rem; */
+    display: inline-block;
+    padding: .5rem 3rem;
+    font-weight: 500;
+    font-size: 2rem;
+    border-radius: 0.8rem;
+    color: var(--black);
+    background: none;
+}
+
+.btn:hover {
+    background-color: var(--green);
+    color: white;
+}
+
+.header .shopping-cart .btn {
+    display: block;
+    text-align: center;
+}
+
+.shopping-cart .shopping {
+    right: 3rem;
+    font-size: 3rem;
+}
+
+.shopping-cart .carts {
+    right: 3rem;
+    font-size: 2rem;
+}
+
+.shopping-cart .ellipse {
+    padding-top: 1.5rem;
+    padding-left: 33rem;
     position: absolute;
-    /* Set the image as an absolute position within the container */
-    top: 190px;
-    /* Adjust the vertical position of the image */
-    left: 270px;
-    /* Adjust the horizontal position of the image */
-    height: 24PX;
-    width: 24PX;
 }
 
-#contantimg {
+.OrderForm {
     position: absolute;
-    /* Set the image as an absolute position within the container */
-    top: 90px;
-    /* Adjust the vertical position of the image */
-    left: 270px;
-    /* Adjust the horizontal position of the image */
-    height: 24PX;
-    width: 24PX;
-
+    border: 2px solid #61B846;
+    align-items: center;
+    right: -110%;
+    top: 11rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    height: 66.5rem;
+    width: 38rem;
+}
+.header .OrderForm.active{
+    right: 2rem;
 }
 
-#Emailimg {
+.header .OrderForm img {
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    margin: 0rem 9rem;
+}
+
+.header .OrderForm .Account {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--black);
+
+}
+.header .OrderForm #username{
+    padding-top: 10px;
+    border: none;
+    background: none;
+    border-bottom: 2px solid #ccc;
+    /* Add a bottom border to show the line */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0rem 7rem;
+    text-align: center;
+}
+.header .OrderForm .Orders{
+    font-size: 2rem;
+    padding: 15px;
+    color: rgb(52, 52, 239);
+}
+.header .OrderForm .Name{
+    font-size: 2rem;
+}
+.header .OrderForm .num{
+  right: 3rem;
+    top: 34rem;
     position: absolute;
-    /* Set the image as an absolute position within the container */
-    top: 140px;
-    /* Adjust the vertical position of the image */
-    left: 270px;
-    /* Adjust the horizontal position of the image */
-    height: 24PX;
-    width: 24PX;
+}
+.header .OrderForm .item{
+    color: #ccc;
+    padding: 1rem 0rem;
+}
+.header .OrderForm .dollar{
+    right: 4rem;
+    top: 39.5rem;
+    position: absolute;
+    color: var(--green);
+}
+.header .OrderForm .line{
+    border: none;
+    background: none;
+    border-bottom: 3px solid #ccc;
+    /* Add a bottom border to show the line */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    width: 34rem;
+    margin-bottom: 2rem;
+}
+.header .OrderForm .just .dollar1{
+    right: 4rem;
+    top: 53rem;
+    position: absolute;
+    color: var(--green);
+}
+.header .OrderForm .just .num1{
+    right: 3rem;
+    top: 47rem;
+    position: absolute;
+}
+.header .OrderForm .btn{
+   width: 34rem;
+    text-align: center;
 }
 
-
-
-@media (max-width : 991px){
-    html{
+@media (max-width : 991px) {
+    html {
         font-size: 50%;
     }
-    .header{
-        padding: 2rem ;
+
+    .header {
+        padding: 2rem;
     }
 }
 
-@media (max-width : 451px){
-    html{
+@media (max-width : 451px) {
+    html {
         font-size: 60%;
     }
 }

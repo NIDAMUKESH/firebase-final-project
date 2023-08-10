@@ -3,6 +3,15 @@ document.querySelector('#search-btn').onclick = () =>{
     searchform.classList.toggle('active');
 }
 
+let shoppingCart= document.querySelector('.shopping-cart');
+document.querySelector('#shoppingcart-btn').onclick = () =>{
+    shoppingCart.classList.toggle('active');
+}
+let Order= document.querySelector('.OrderForm');
+document.querySelector('#login-btn').onclick = () =>{
+    Order.classList.toggle('active');
+}
+
 const boxes = document.querySelectorAll('.box');
 const totalElement = document.querySelector('.total');
 
