@@ -9,7 +9,7 @@
     border: none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: all .1s linear;
+    transition: all .2s linear;
 }
 
 :root {
@@ -66,10 +66,10 @@ body {
     color: var(--green);
 }
 
-/* .home.active {
-    background-color: var(--green);
-    color: white; /* Change to the desired color, e.g., green 
-} */
+.header .navbar .home.active{
+    color: var(--green);
+}
+
 .header .icons div {
     height: 4.5rem;
     width: 4.5rem;
@@ -91,6 +91,10 @@ body {
 #menu-btn {
     display: none;
 }
+.header .navbar.active{
+    right: 2rem;
+    transition: 0.4s linear;
+}
 
 .header .search-form {
     position: absolute;
@@ -104,6 +108,8 @@ body {
     display: flex;
     align-items: center;
     box-shadow: var(--box-shadow);
+    border: 2px solid #61B846;
+
 }
 
 .header .search-form.active {
@@ -385,18 +391,81 @@ body {
     text-align: center;
 }
 
-@media (max-width : 991px) {
-    html {
-        font-size: 50%;
-    }
 
-    .header {
-        padding: 2rem;
+
+
+
+@media (max-width : 768px) {
+  
+#menu-btn {
+    display: inline-block;
+}
+    .header .navbar{
+      position: absolute;
+      top: 110%;
+      right: -110%;
+      width: 30rem;
+      box-shadow: var(--box-shadow);
+      border-radius: 0.5rem;
+      background: #fff;
+     border: 2px solid #61B846;
+
+    }
+    .header .icons{
+        font-size: 1rem;
+    }
+    .header .navbar a{
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
     }
 }
 
-@media (max-width : 451px) {
+@media (max-width : 991px) {
     html {
-        font-size: 60%;
+        font-size: 40%;
     }
+
+    .header {
+        padding: 1.5rem;
+    }
+    #menu-btn {
+        display: inline-block;
+    }
+        .header .navbar{
+          position: absolute;
+          top: 110%;
+          right: -110%;
+          width: 30rem;
+          box-shadow: var(--box-shadow);
+          border-radius: 0.5rem;
+          background: #fff;
+        }
+        .header .navbar a{
+            font-size: 2rem;
+            margin: 2rem 2.5rem;
+            display: block;
+        }
+}
+
+@media (max-width : 371px) {
+    html {
+        font-size: 40%;
+    }
+  
+        .header .navbar{
+          position: absolute;
+          top: 110%;
+          right: -110%;
+          width: 30rem;
+          box-shadow: var(--box-shadow);
+          border-radius: 0.5rem;
+          background: #fff;
+        }
+        .header .navbar a{
+            font-size: 2rem;
+            margin: 2rem 2.5rem;
+            display: block;
+        }
+   
 }
