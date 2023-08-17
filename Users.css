@@ -18,7 +18,7 @@
     --lighht-color: #666;
     --box-shadow: 5px 5px 10px rgba(122, 123, 122, 0.9);
     --border: 2rem solid rgba(0, 0, 0.1);
-    --outline: 0.1rem solid rgba(0, 0, 0.1);
+    --outline: 0.1rem solid rgb(128, 125, 125);
 }
 
 html {
@@ -30,6 +30,20 @@ html {
 
 body {
     background-color: #eee;
+}
+
+.home {
+    margin-top: 10rem;
+    /* Adjust as needed */
+}
+
+.home .content img {
+    width: 100%;
+    height: 600px;
+    /* Example: Fixed height of 400 pixels */
+    box-sizing: border-box;
+    /* Include padding and border in the height calculation */
+    padding-bottom: 5rem;
 }
 
 .img {
@@ -66,7 +80,7 @@ body {
     color: var(--green);
 }
 
-.header .navbar .home.active{
+.header .navbar .home.active {
     color: var(--green);
 }
 
@@ -91,7 +105,8 @@ body {
 #menu-btn {
     display: none;
 }
-.header .navbar.active{
+
+.header .navbar.active {
     right: 2rem;
     transition: 0.4s linear;
 }
@@ -147,9 +162,11 @@ body {
     border-radius: 0.5rem;
     box-shadow: var(--box-shadow);
     width: 40rem;
-    height: 100rem;
+    max-height: 550px;
     background: white;
     border: 2px solid #61B846;
+    overflow-y: auto;
+
 }
 
 .header .shopping-cart.active {
@@ -314,7 +331,8 @@ body {
     height: 66.5rem;
     width: 38rem;
 }
-.header .OrderForm.active{
+
+.header .OrderForm.active {
     right: 2rem;
 }
 
@@ -331,7 +349,8 @@ body {
     color: var(--black);
 
 }
-.header .OrderForm #username{
+
+.header .OrderForm #username {
     padding-top: 10px;
     border: none;
     background: none;
@@ -342,30 +361,36 @@ body {
     margin: 0rem 7rem;
     text-align: center;
 }
-.header .OrderForm .Orders{
+
+.header .OrderForm .Orders {
     font-size: 2rem;
     padding: 15px;
     color: rgb(52, 52, 239);
 }
-.header .OrderForm .Name{
+
+.header .OrderForm .Name {
     font-size: 2rem;
 }
-.header .OrderForm .num{
-  right: 3rem;
+
+.header .OrderForm .num {
+    right: 3rem;
     top: 34rem;
     position: absolute;
 }
-.header .OrderForm .item{
+
+.header .OrderForm .item {
     color: #ccc;
     padding: 1rem 0rem;
 }
-.header .OrderForm .dollar{
+
+.header .OrderForm .dollar {
     right: 4rem;
     top: 39.5rem;
     position: absolute;
     color: var(--green);
 }
-.header .OrderForm .line{
+
+.header .OrderForm .line {
     border: none;
     background: none;
     border-bottom: 3px solid #ccc;
@@ -375,46 +400,199 @@ body {
     width: 34rem;
     margin-bottom: 2rem;
 }
-.header .OrderForm .just .dollar1{
+
+.header .OrderForm .just .dollar1 {
     right: 4rem;
     top: 53rem;
     position: absolute;
     color: var(--green);
 }
-.header .OrderForm .just .num1{
+
+.header .OrderForm .just .num1 {
     right: 3rem;
     top: 47rem;
     position: absolute;
 }
-.header .OrderForm .btn{
-   width: 34rem;
+
+.header .OrderForm .btn {
+    width: 34rem;
     text-align: center;
 }
 
+section .text-shadow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 6em;
+    color: white;
+    text-transform: uppercase;
 
+}
 
+h1 {
+    font-size: 3rem;
+    text-decoration: underline;
+
+    @media (max-width: 768px) {
+        font-size: 1.3em;
+    }
+}
+
+.text-shadow {
+    font-style: italic;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: #262525;
+    -webkit-text-stroke-width: 1px;
+    text-shadow: 3px 3px 10px var(--green);
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    /* letter-spacing: 0.2em; */
+    animation: flicker 0.5s ease-in-out infinite alternate;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.tags small {
+    @media (max-width: 768px) {
+        font-size: 0.5em;
+    }
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.5;
+        text-shadow: 2px 2px 10px var(--green);
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 2px 2px 20px var(--green);
+    }
+}
+
+.features .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 10rem;
+
+}
+
+.features .box-container .box {
+
+    padding: 3rem 2rem;
+    background-color: #fff;
+    outline: var(--outline);
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border: 2px solid #61B846;
+}
+
+.features .box-container .box:hover {
+    box-shadow: 1px 1px 20px 4px var(--green);
+}
+
+.features .box-container .box .Rectangle {
+    height: 25rem;
+    width: 30rem;
+    margin: 1rem 0rem;
+}
+
+.features .box-container .box h3 {
+    font-size: 3rem;
+    line-height: 1.8;
+    color: var(--green);
+}
+
+.features .box-container .box p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--lighht-color);
+    padding: 1rem 0rem;
+}
+/* Products */
+.Products .wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 6rem;
+}
+.Products .product-slider{
+     /* border: 2px solid; */
+     padding: 2rem;
+     margin: 5rem 5rem;
+}
+.Products .product-slider:first-child{
+    margin-bottom: 2rem;
+
+}
+.Products .product-slider .box{
+    /* border: 2px solid red; */
+    background: #fff;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 2rem 3rem;
+    outline: var(--outline);
+    outline-offset: -1rem;
+    box-shadow: var(--box-shadow);
+    transition: .2s linear;
+    border: 2px solid #61B846;
+
+}
+.Products .product-slider .box:hover{
+    box-shadow: 1px 1px 20px 4px var(--green);
+}
+.Products .product-slider .box img{
+    height: 25rem;
+    width: 30rem;
+    margin: 1rem 0rem;
+}
+.Products .product-slider .box h1{
+    font-size: 3rem;
+    line-height: 1.8;
+    color: var(--green);
+    text-decoration: none;
+}
+.Products .product-slider .box .price{
+    font-size: 2rem;
+    color: var(--lighht-color);
+    padding: 0.5rem 0rem;
+}
+.Products .product-slider .box .star i{
+    font-size: 1.7rem;
+    padding: 0.5rem 0rem ;
+    color: orange;
+}
 
 
 @media (max-width : 768px) {
-  
-#menu-btn {
-    display: inline-block;
-}
-    .header .navbar{
-      position: absolute;
-      top: 110%;
-      right: -110%;
-      width: 30rem;
-      box-shadow: var(--box-shadow);
-      border-radius: 0.5rem;
-      background: #fff;
-     border: 2px solid #61B846;
+
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: 0.5rem;
+        background: #fff;
+        border: 2px solid #61B846;
 
     }
-    .header .icons{
+
+    .header .icons {
         font-size: 1rem;
     }
-    .header .navbar a{
+
+    .header .navbar a {
         font-size: 2rem;
         margin: 2rem 2.5rem;
         display: block;
@@ -429,43 +607,47 @@ body {
     .header {
         padding: 1.5rem;
     }
+
     #menu-btn {
         display: inline-block;
     }
-        .header .navbar{
-          position: absolute;
-          top: 110%;
-          right: -110%;
-          width: 30rem;
-          box-shadow: var(--box-shadow);
-          border-radius: 0.5rem;
-          background: #fff;
-        }
-        .header .navbar a{
-            font-size: 2rem;
-            margin: 2rem 2.5rem;
-            display: block;
-        }
+
+    .header .navbar {
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: 0.5rem;
+        background: #fff;
+    }
+
+    .header .navbar a {
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+    }
 }
 
 @media (max-width : 371px) {
     html {
         font-size: 40%;
     }
-  
-        .header .navbar{
-          position: absolute;
-          top: 110%;
-          right: -110%;
-          width: 30rem;
-          box-shadow: var(--box-shadow);
-          border-radius: 0.5rem;
-          background: #fff;
-        }
-        .header .navbar a{
-            font-size: 2rem;
-            margin: 2rem 2.5rem;
-            display: block;
-        }
-   
+
+    .header .navbar {
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: 0.5rem;
+        background: #fff;
+    }
+
+    .header .navbar a {
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+    }
+
 }

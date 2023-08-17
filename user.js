@@ -78,3 +78,13 @@ function updateUI() {
     priceElement.textContent = `$${price.toFixed(2)}`;
     quantityElement.textContent = quantity;
 }
+
+// var swiper = new Swiper(".product-slider", {
+//     loop : true,
+//     slidesPerView: 3,
+//     spaceBetween: 30,
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
+//   });
