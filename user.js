@@ -38,53 +38,38 @@ window.onscroll = () =>{
     navbar.classList.remove('active');
 }
 
-const boxes = document.querySelectorAll('.box');
-const totalElement = document.querySelector('.total');
+const addButton = document.querySelectorAll('.add');
+const subButton = document.querySelectorAll('.sub');
+const quantityElements = document.querySelectorAll('.quantity');
+const priceElements = document.querySelectorAll('.price');
+const totalAmountElement = document.querySelector('.total-amount');
 
-let total = 105.00; // Initial total value
-
-boxes.forEach(box => {
-    const priceElement = box.querySelector('.price');
-    const quantityElement = box.querySelector('.quantity');
-    const addButton = box.querySelector('.add');
-    const subButton = box.querySelector('.sub');
-
-    let price = parseFloat(priceElement.textContent.replace('$', ''));
-    let quantity = 1;
-
-    addButton.addEventListener('click', () => {
-        price *= 2;
+for (let i = 0; i < addButton.length; i++) {
+    addButton[i].addEventListener('click', () => {
+        let quantity = parseInt(quantityElements[i].textContent);
+        let price = parseFloat(priceElements[i].textContent.slice(1));
         quantity++;
-        total += price;
-        updateUI();
+        quantityElements[i].textContent = quantity;
+        priceElements[i].textContent = '$' + (price + price).toFixed(2);
+        updateTotal();
     });
 
-    subButton.addEventListener('click', () => {
-        if (quantity > 1) {
-            price /= 2;
+    subButton[i].addEventListener('click', () => {
+        let quantity = parseInt(quantityElements[i].textContent);
+        let price = parseFloat(priceElements[i].textContent.slice(1));
+        if (quantity > 0) {
             quantity--;
-            total -= price;
-            updateUI();
+            quantityElements[i].textContent = quantity;
+            priceElements[i].textContent = '$' + (price - price).toFixed(2);
+            updateTotal();
         }
     });
-
-    function updateUI() {
-        priceElement.textContent = `$${price.toFixed(2)}`;
-        quantityElement.textContent = quantity;
-        totalElement.textContent = `Total: $${total.toFixed(2)}`;
-    }
-});
-function updateUI() {
-    priceElement.textContent = `$${price.toFixed(2)}`;
-    quantityElement.textContent = quantity;
 }
 
-// var swiper = new Swiper(".product-slider", {
-//     loop : true,
-//     slidesPerView: 3,
-//     spaceBetween: 30,
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//     },
-//   });
+function updateTotal() {
+    let total = 0;
+    for (let i = 0; i < quantityElements.length; i++) {
+        total += parseFloat(priceElements[i].textContent.slice(1)) * parseInt(quantityElements[i].textContent);
+    }
+    totalAmountElement.textContent = '$' + total.toFixed(2);
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Item</title>
+    <link rel="WebSite icon" type="png" href="./Image/Logo.png">
+    <link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+    <div class="green-box2">
+        <div class="div1">
+        <img src="./Image/Admin pic.png" class="Ellipse6" alt="" >
+        <font class="Mr">Mr. Ahmed<br>
+         <h2 class="Admin1">Admin</h2></font>
+    </div>
+    <img src="./Image/navbar.png" alt="" class="line7"><br>
+    <font class="all">Add New Item</font>
+    <div class="Describenew1">
+         <img src="./Image/image 32.png" alt="" class="image22" id="cameraicon">
+    </div>
+    <!-- <img src="./images/Grocery.png" alt="" class="image22"> -->
+    <div class="newitem">
+        <font class="itemname" id="Itemname">Item Name</font>
+    </div>
+    <div class="newitem">
+        <font class="itemname" id="SelectCategory">Select Category</font>
+    </div>
+    <div class="Describenew">
+        <font class="itemname" id="Describeitem">Describe this item</font>
+    </div>
+    <br>
+     <div class="div1">
+        <font class="unit" id="Unitname">Unit name:</font>
+         <div class="dozen">
+            <font class="Pcs" id="Kg">Pcs./Kg/dozen</font>
+         </div>
+     </div>
+     <div class="div1">
+        <font class="unit1" id="Unitprice">Unit Price:</font>
+         <div class="dozen1">
+            <font class="Pcs" id="rupees">$3.22</font>
+         </div>
+     </div>
+     <a href=""><button class="green-button">Add Product</button></a>
+     <div class="navbar">
+        <a href="./Allproduct.html" class="active" >Home</a>
+        <a href="./addnewitem.html" >Add New Item</a>
+        <a href="./adminsetting.html">Account</a>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <!-- import { getDatabase } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js"; -->
+  
+    <script src="./firebase-config.js"></script>    
+    <script src="./product.js"></script>
+</body>
+</html>
